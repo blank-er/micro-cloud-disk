@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>微云盘</title>
+
+    <!-- Bootstrap -->
+    <link rel="shortcut icon" href="../src/cloud.ico" type="image/x-icon" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/myCss.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mainWindow">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <!DOCTYPE &amp;&amp;&amp; PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 343.304 343.304" style="enable-background:new 0 0 343.304 343.304;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M278.495,283.135l-207.033-1.011c-15.35,0-30.011-4.814-42.362-13.922c-3.333-2.458-4.043-7.154-1.584-10.487
+			c2.458-3.334,7.154-4.044,10.487-1.585c9.753,7.192,21.336,10.994,33.496,10.994l207.032,1.011
+			c27.429,0,49.773-22.344,49.773-49.809s-22.345-49.809-49.81-49.809c-4.143,0-7.5-3.358-7.5-7.5s3.357-7.5,7.5-7.5
+			c35.736,0,64.81,29.073,64.81,64.809S314.231,283.135,278.495,283.135z"/>
+	</g>
+    <g>
+		<path d="M7.5,218.126c-4.142,0-7.5-3.358-7.5-7.5c0-39.424,32.074-71.499,71.499-71.499c9.67,0,19.126,1.934,27.897,5.661
+			c3.336-47.22,42.82-84.62,90.875-84.62c20.982,0,41.464,7.307,57.672,20.575c15.98,13.081,27.141,31.347,31.427,51.435
+			c0.864,4.051-1.719,8.036-5.771,8.9c-4.051,0.863-8.034-1.719-8.899-5.77c-7.435-34.847-38.736-60.139-74.429-60.139
+			c-41.963,0-76.104,34.14-76.104,76.104c0,1.609,0.122,3.273,0.25,5.034l0.038,0.523c0.207,2.857-1.231,5.582-3.707,7.023
+			c-2.477,1.441-5.556,1.346-7.938-0.244c-9.293-6.204-20.121-9.482-31.313-9.482C40.345,154.128,15,179.473,15,210.626
+			C15,214.768,11.642,218.126,7.5,218.126z"/>
+	</g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+                <g>
+</g>
+</svg>
+            <div id="text-index">微云盘</div>
+            <div id="btn-index">
+            <input type="button" class="btn btn-default" style="font-size: 20px"
+                   data-toggle="modal" data-target="#myModel" value="登录/注册">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container fileShowNode hide">
+    <table class="table text-center table-hover">
+        <thead>
+        <tr>
+            <td>文件名</td>
+            <td>文件大小</td>
+            <td>上传时间</td>
+            <td>下载次数</td>
+            <td>下载</td>
+            <td>删除</td>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <input type="file" id="file">
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn btn-default btn-primary btn-xs" id="btn-submit" value="上传文件">
+        </div>
+    </form>
+
+</div>
+
+<div class="modal fade" id="myModel" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">登录/注册</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>用户名:</label>
+                        <input class="form-control" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label>密码:</label>
+                        <input class="form-control" id="password" type="password">
+                    </div>
+                    <div class="col-md-1 col-md-offset-3">
+                        <input type="button" value="注册" id="btn-res" class="btn btn-default">
+                    </div>
+                    <div class="col-md-1 col-md-offset-3">
+                        <input type="button" value="登录" id="btn-login" class="btn btn-default">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    // let i = 1;//全局变量用于选中元素
+
+    function toTr(hashName ,lastName, size, lastTime, dlTimes){
+        let oTr = document.createElement('tr');
+        // let id_dlTimes = "dlTimes" + i + "-" + 1;
+        // let id_download = "btn-download" + i + "-" + 2;
+        oTr.setAttribute('hash', hashName);
+        oTr.innerHTML =
+            `<td>${lastName}</td>
+            <td>${size}</td>
+            <td>${lastTime}</td>
+            <td id="dlTimes">${dlTimes}</td>
+            <td><input type="button" id="btn-download" class="btn btn-default btn-success btn-xs" value="下载"></td>
+            <td><input type="button" id="btn-delete" class="btn btn-default btn-danger btn-xs" value="删除"></td>`
+        // $("#dlTimes").attr('id', id_dlTimes);
+        // $("#btn-delete").attr('id', id_download);
+
+        // i++;
+        return oTr;
+    }
+
+    //注册
+    $('#btn-res').on({
+        click() {
+            $.ajax({
+                url:'http://localhost:3000/res',
+                type:'get',
+                data:{
+                    'username':$('#username').val(),
+                    'password':$('#password').val()
+                },
+                complete:function (data) {
+                    //console.log(data);
+                    if (data.responseJSON.ok === 1){
+                        alert(data.responseJSON.msg);
+                        $('.modal').toggle();
+
+                    }else{
+                        alert(data.responseJSON.msg);
+                    }
+                }
+            })
+        }
+    });
+
+    //登录
+    $('#btn-login').on({
+        click() {
+            $.ajax({
+                url:'http://localhost:3000/login',
+                type:'get',
+                data:{
+                    'username':$('#username').val(),
+                    'password':$('#password').val()
+                },
+                complete:function (data) {
+                    //console.log(data);
+                    if (data.responseJSON[0].ok === 1){
+                        alert(data.responseJSON[0].msg);
+                        for(let i = 1; i < data.responseJSON.length; i++){
+                            $('.fileShowNode tbody')[0].appendChild(toTr(data.responseJSON[i].hashName,
+                                data.responseJSON[i].lastName,(data.responseJSON[i].size / 1024).toFixed(2).toString() + "KB",
+                                data.responseJSON[i].lastTime, data.responseJSON[i].dlTimes));
+                        }
+
+                        $('.modal').modal('toggle');
+                        $('.mainWindow').addClass('hide');
+                        $('.fileShowNode').removeClass('hide');
+                    }else{
+                        alert(data.responseJSON[0].msg);
+                    }
+                }
+            })
+        }
+    })
+
+
+    //上传文件
+    $('#btn-submit').on({
+        click(){
+            let file = $('#file')[0].files[0];
+            console.log(file);
+            let formData = new FormData();
+            formData.append('file', file);
+            formData.append('userName', $('#username').val());
+
+            $.ajax({
+                url:'http://localhost:3000/getfiles',
+                type:'post',
+                data:formData,
+                processData: false,
+                contentType: false,
+                complete:function (data){
+                    if (data.responseJSON.ok === 1){
+                        alert('上传成功!');
+                        $('#file').val('');
+                       $('.fileShowNode tbody')[0].appendChild(toTr(data.responseJSON.hashName,
+                           file.name, (file.size / 1024).toFixed(2).toString() + "KB",
+                           new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(), 0));
+                    }
+                }
+            })
+        }
+    })
+
+    //删除文件
+    $('body').on({
+        click(){
+            let _this = this;
+            $.ajax({
+                url:'http://localhost:3000/deletefile',
+                type:'get',
+                data:{
+                    'userName':$('#username').val(),
+                    'hashName':$(_this.parentNode.parentNode).attr('hash')
+                },
+                complete:function (data){
+                    if(data.responseJSON.ok === 1){
+                        alert('文件已删除');
+                        _this.parentNode.parentNode.remove();
+                    }
+                }
+            })
+        }
+    }, '#btn-delete')
+
+    //下载文件
+    $('body').on({
+        click() {
+            let _this = this;
+            window.open('http://localhost:3000/download?' + 'userName=' + $('#username').val() +
+                '&' + 'hashName=' + $(_this.parentNode.parentNode).attr('hash'), '_self');
+                let downloadNode = _this.parentNode.parentNode.querySelector('#dlTimes');
+                downloadNode.innerHTML = Number(downloadNode.innerHTML) + 1;
+        }
+    }, '#btn-download')
+
+</script>
+
+</body>
+</html>

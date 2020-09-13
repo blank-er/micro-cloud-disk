@@ -1,0 +1,19 @@
+{
+  "name": "pan",
+  "version": "1.0.0",
+  "dependencies": {
+    "@koa/multer": "^3.0.0",
+    "axios": "^0.19.2",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.1.0",
+    "koa-send": "^5.0.1",
+    "multer": "^1.4.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.3"
+  },
+  "devDependencies": {
+    "koa-static": "^5.0.0"
+  }
+}
